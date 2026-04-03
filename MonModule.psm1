@@ -15,9 +15,10 @@ function Get-PipeT {
 }
 
 function Get-Users {
-    if (Test-Path "/etc/passwd") {
-        Get-Content "/etc/passwd" | Export-Csv -Path "users.csv" -NoTypeInformation
-}
+    $csvP = "/home/addie/Desktop/TD5"
+    if (Test-Path $csvP) {
+        Import-Csv -Path $csvP | Format-Table
+    }
 }
 
 Get-Users
