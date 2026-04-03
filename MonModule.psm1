@@ -15,7 +15,7 @@ function Get-PipeT {
 }
 
 function Get-Users {
-    $csvP = "/home/addie/Desktop/TD5"
+    $csvP = "/home/addie/Desktop/TD5/users.csv"
     if (Test-Path $csvP) {
         Import-Csv -Path $csvP | Format-Table
     }
